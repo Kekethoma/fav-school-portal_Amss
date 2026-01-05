@@ -1,0 +1,9 @@
+{
+    "css.lint.unknownAtRules": "ignore",
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "gradient-(?:primary|secondary|dark)",
+            ""
+        ]
+    ]
+}
