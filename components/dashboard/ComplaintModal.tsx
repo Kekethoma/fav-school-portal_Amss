@@ -40,14 +40,14 @@ export function ComplaintModal() {
             </DialogTrigger>
             <DialogContent className="bg-black border border-white/10 text-white sm:max-w-md">
                 <DialogHeader>
-                    <DialogTitle className="text-[#60a5fa]">File a Complaint</DialogTitle>
+                    <DialogTitle className="text-[#facc15]">File a Complaint</DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit} className="space-y-4 py-4">
                     <div className="space-y-2">
                         <label className="text-sm font-medium">Issue Title</label>
                         <input
                             required
-                            className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-[#60a5fa] outline-none"
+                            className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm focus:ring-1 focus:ring-[#facc15] outline-none"
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
                             placeholder="e.g., Grade discrepancy"
@@ -57,13 +57,13 @@ export function ComplaintModal() {
                         <label className="text-sm font-medium">Description</label>
                         <textarea
                             required
-                            className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm h-32 resize-none focus:ring-1 focus:ring-[#60a5fa] outline-none"
+                            className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm h-32 resize-none focus:ring-1 focus:ring-[#facc15] outline-none"
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             placeholder="Describe your issue..."
                         />
                     </div>
-                    <Button type="submit" disabled={loading} className="w-full bg-[#1e40af] hover:bg-[#600018] text-white">
+                    <Button type="submit" disabled={loading} className="w-full bg-[#16a34a] hover:bg-[#600018] text-white">
                         {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
                         Submit Complaint
                     </Button>

@@ -60,11 +60,11 @@ export default function ReportsPage() {
     )
 
     return (
-        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-[#16a34a] p-4 md:p-8">
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
                     <Link href="/principal/dashboard">
-                        <Button variant="ghost" className="dark:text-white dark:hover:text-[#60a5fa]">
+                        <Button variant="ghost" className="dark:text-white dark:hover:text-[#facc15]">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Back to Dashboard
                         </Button>
@@ -75,7 +75,7 @@ export default function ReportsPage() {
                 {/* Filter Controls */}
                 <Card className="mb-8 border-white/10 bg-black/40 backdrop-blur-md">
                     <CardHeader className="border-b border-white/5">
-                        <CardTitle className="text-[#60a5fa] flex items-center gap-2 text-sm uppercase tracking-widest">
+                        <CardTitle className="text-[#facc15] flex items-center gap-2 text-sm uppercase tracking-widest">
                             <Filter className="h-4 w-4" /> Report Filter Context
                         </CardTitle>
                     </CardHeader>
@@ -87,7 +87,7 @@ export default function ReportsPage() {
                                     name="academicYearId"
                                     value={filters.academicYearId}
                                     onChange={handleInputChange}
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#60a5fa] [&>option]:bg-black"
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#facc15] [&>option]:bg-black"
                                 >
                                     <option value="">All Years</option>
                                     {options.academicYears.map(ay => (
@@ -102,7 +102,7 @@ export default function ReportsPage() {
                                     name="term"
                                     value={filters.term}
                                     onChange={handleInputChange}
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#60a5fa] [&>option]:bg-black"
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#facc15] [&>option]:bg-black"
                                 >
                                     <option value="">All Terms</option>
                                     <option value="1">Term 1</option>
@@ -117,7 +117,7 @@ export default function ReportsPage() {
                                     name="department"
                                     value={filters.department}
                                     onChange={handleInputChange}
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#60a5fa] [&>option]:bg-black"
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#facc15] [&>option]:bg-black"
                                 >
                                     <option value="">All Departments</option>
                                     <option value="SCIENCE">Science</option>
@@ -132,7 +132,7 @@ export default function ReportsPage() {
                                     name="classId"
                                     value={filters.classId}
                                     onChange={handleInputChange}
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#60a5fa] [&>option]:bg-black"
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#facc15] [&>option]:bg-black"
                                 >
                                     <option value="">{filters.department ? 'Related Classes' : 'All Classes'}</option>
                                     {filteredClasses.map(c => (
@@ -147,7 +147,7 @@ export default function ReportsPage() {
                                     name="gender"
                                     value={filters.gender}
                                     onChange={handleInputChange}
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#60a5fa] [&>option]:bg-black"
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-[#facc15] [&>option]:bg-black"
                                 >
                                     <option value="">Both Genders</option>
                                     <option value="MALE">Male</option>
@@ -155,8 +155,8 @@ export default function ReportsPage() {
                                 </select>
                             </div>
                         </div>
-                        <div className="mt-4 flex items-center gap-2 p-3 bg-[#60a5fa]/5 border border-[#60a5fa]/10 rounded-lg">
-                            <Info className="h-4 w-4 text-[#60a5fa]" />
+                        <div className="mt-4 flex items-center gap-2 p-3 bg-[#facc15]/5 border border-[#facc15]/10 rounded-lg">
+                            <Info className="h-4 w-4 text-[#facc15]" />
                             <p className="text-xs text-gray-400">Filters selected above will be applied to all downloads below.</p>
                         </div>
                     </CardContent>
@@ -164,17 +164,17 @@ export default function ReportsPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Student Data */}
-                    <Card className="border-white/10 bg-black/40 backdrop-blur-sm hover:border-[#60a5fa]/30 transition-colors">
+                    <Card className="border-white/10 bg-black/40 backdrop-blur-sm hover:border-[#facc15]/30 transition-colors">
                         <CardHeader>
                             <CardTitle className="text-white flex items-center gap-2">
-                                <GraduationCap className="h-5 w-5 text-[#60a5fa]" />
+                                <GraduationCap className="h-5 w-5 text-[#facc15]" />
                                 Student Enrollment
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4 text-sm text-gray-400">
                             <p>Export full student profiles including contact details and status based on filters.</p>
                             <Button
-                                className="w-full bg-[#60a5fa] text-black hover:bg-[#3b82f6]"
+                                className="w-full bg-[#facc15] text-black hover:bg-[#15803d]"
                                 onClick={() => handleExport('students')}
                                 disabled={exporting === 'students'}
                             >
@@ -185,17 +185,17 @@ export default function ReportsPage() {
                     </Card>
 
                     {/* Class Rolls */}
-                    <Card className="border-white/10 bg-black/40 backdrop-blur-sm hover:border-[#60a5fa]/30 transition-colors">
+                    <Card className="border-white/10 bg-black/40 backdrop-blur-sm hover:border-[#facc15]/30 transition-colors">
                         <CardHeader>
                             <CardTitle className="text-white flex items-center gap-2">
-                                <ClipboardList className="h-5 w-5 text-[#1e40af]" />
+                                <ClipboardList className="h-5 w-5 text-[#16a34a]" />
                                 Class Rolls
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4 text-sm text-gray-400">
                             <p>Generate class-wise attendance and roll call sheets with filtered student lists.</p>
                             <Button
-                                className="w-full bg-[#1e40af] text-white hover:bg-[#1d4ed8]"
+                                className="w-full bg-[#16a34a] text-white hover:bg-[#1d4ed8]"
                                 onClick={() => handleExport('rolls')}
                                 disabled={exporting === 'rolls'}
                             >
@@ -206,17 +206,17 @@ export default function ReportsPage() {
                     </Card>
 
                     {/* Academic Grades */}
-                    <Card className="border-white/10 bg-black/40 backdrop-blur-sm hover:border-[#60a5fa]/30 transition-colors">
+                    <Card className="border-white/10 bg-black/40 backdrop-blur-sm hover:border-[#facc15]/30 transition-colors">
                         <CardHeader>
                             <CardTitle className="text-white flex items-center gap-2">
-                                <BarChart className="h-5 w-5 text-blue-500" />
+                                <BarChart className="h-5 w-5 text-green-600" />
                                 Academic Grades
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4 text-sm text-gray-400">
                             <p>Export detailed subject grades, CA scores, and terminal exam results for review.</p>
                             <Button
-                                className="w-full bg-blue-600 text-white hover:bg-blue-700"
+                                className="w-full bg-green-600 text-white hover:bg-blue-700"
                                 onClick={() => handleExport('grades')}
                                 disabled={exporting === 'grades'}
                             >

@@ -32,7 +32,7 @@ export default async function AuditLogPage() {
                         </Link>
                         <div>
                             <h1 className="text-3xl font-bold flex items-center gap-2">
-                                <Shield className="h-8 w-8 text-[#60a5fa]" />
+                                <Shield className="h-8 w-8 text-[#facc15]" />
                                 System Audit Logs
                             </h1>
                             <p className="text-gray-500">Track all administrative and critical system actions</p>
@@ -76,9 +76,9 @@ export default async function AuditLogPage() {
                                                 </td>
                                                 <td className="px-6 py-4">
                                                     <span className={`px-2 py-1 rounded text-[10px] font-bold tracking-wider uppercase ${log.action.includes('ERROR') ? 'bg-red-500/20 text-red-500' :
-                                                        log.action.includes('LOGIN') ? 'bg-blue-500/20 text-blue-500' :
+                                                        log.action.includes('LOGIN') ? 'bg-green-600/20 text-green-600' :
                                                             log.action.includes('REGISTRATION') ? 'bg-green-500/20 text-green-500' :
-                                                                'bg-[#60a5fa]/20 text-[#60a5fa]'
+                                                                'bg-[#facc15]/20 text-[#facc15]'
                                                         }`}>
                                                         {log.action.replace(/_/g, ' ')}
                                                     </span>

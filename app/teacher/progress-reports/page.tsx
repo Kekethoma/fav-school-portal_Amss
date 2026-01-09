@@ -85,22 +85,22 @@ export default function ProgressReportsPage() {
 
     if (loading) return (
         <div className="min-h-screen bg-black flex items-center justify-center">
-            <Loader2 className="h-8 w-8 text-[#60a5fa] animate-spin" />
+            <Loader2 className="h-8 w-8 text-[#facc15] animate-spin" />
         </div>
     )
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
                     <Link href="/teacher/dashboard">
-                        <Button variant="ghost" className="text-white hover:text-[#60a5fa]">
+                        <Button variant="ghost" className="text-white hover:text-[#facc15]">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Dashboard
                         </Button>
                     </Link>
                     <div className="flex items-center gap-2">
-                        <Sparkles className="h-5 w-5 text-[#60a5fa]" />
+                        <Sparkles className="h-5 w-5 text-[#facc15]" />
                         <h1 className="text-2xl font-bold text-white">AI Progress Reports</h1>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ export default function ProgressReportsPage() {
                             {filteredStudents.map(stu => (
                                 <div
                                     key={stu.id}
-                                    className="flex items-center justify-between p-3 bg-white/5 border border-white/5 rounded-lg group hover:border-[#60a5fa]/50 transition-all"
+                                    className="flex items-center justify-between p-3 bg-white/5 border border-white/5 rounded-lg group hover:border-[#facc15]/50 transition-all"
                                 >
                                     <div>
                                         <p className="text-white font-medium text-sm">{stu.user.name}</p>
@@ -147,10 +147,10 @@ export default function ProgressReportsPage() {
                     {/* Report Preview & History */}
                     <div className="lg:col-span-2 space-y-6">
                         {previewReport ? (
-                            <Card className="border-[#60a5fa]/30 bg-black/60 backdrop-blur-md animate-in fade-in slide-in-from-bottom-4">
+                            <Card className="border-[#facc15]/30 bg-black/60 backdrop-blur-md animate-in fade-in slide-in-from-bottom-4">
                                 <CardHeader className="flex flex-row items-center justify-between border-b border-white/10">
                                     <div>
-                                        <CardTitle className="text-[#60a5fa]">Progress Report</CardTitle>
+                                        <CardTitle className="text-[#facc15]">Progress Report</CardTitle>
                                         <p className="text-xs text-gray-400 mt-1">{previewReport.student.user.name}</p>
                                     </div>
                                     <div className="flex gap-2">
@@ -178,7 +178,7 @@ export default function ProgressReportsPage() {
                                         {reports.map(report => (
                                             <div
                                                 key={report.id}
-                                                className="flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-lg hover:border-[#60a5fa]/50 cursor-pointer transition-all"
+                                                className="flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-lg hover:border-[#facc15]/50 cursor-pointer transition-all"
                                                 onClick={() => setPreviewReport(report)}
                                             >
                                                 <div className="flex items-center gap-4">

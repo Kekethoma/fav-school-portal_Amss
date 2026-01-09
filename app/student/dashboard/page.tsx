@@ -72,7 +72,7 @@ export default async function StudentDashboard() {
     }))
 
     return (
-        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-[#1e40af]">
+        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-[#16a34a]">
             {/* Header */}
             <header className="bg-background/80 dark:bg-black/30 backdrop-blur-md border-b border-border dark:border-white/10 sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -205,7 +205,7 @@ export default async function StudentDashboard() {
                                             </div>
                                             <span className={`px-2 py-0.5 rounded text-xs font-bold ${grade.grade === 'A' ? 'bg-green-500/20 text-green-400' :
                                                 grade.grade === 'F' ? 'bg-red-500/20 text-red-400' :
-                                                    'bg-[#60a5fa]/20 text-[#60a5fa]'
+                                                    'bg-[#facc15]/20 text-[#facc15]'
                                                 }`}>
                                                 Grade: {grade.grade}
                                             </span>
@@ -231,7 +231,7 @@ export default async function StudentDashboard() {
                                             </div>
                                             <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
                                                 <div
-                                                    className="h-full bg-gradient-to-r from-[#1e40af] to-[#60a5fa]"
+                                                    className="h-full bg-gradient-to-r from-[#16a34a] to-[#facc15]"
                                                     style={{ width: `${grade.total}%` }}
                                                 />
                                             </div>

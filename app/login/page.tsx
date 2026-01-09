@@ -52,12 +52,12 @@ export default function LoginPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] flex items-center justify-center p-4">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] flex items-center justify-center p-4">
             <div className="w-full max-w-md">
                 {/* Logo and Title */}
                 <div className="text-center mb-8 animate-fadeIn">
                     <Link href="/" className="inline-flex items-center space-x-2 mb-4">
-                        <GraduationCap className="h-12 w-12 text-[#60a5fa]" />
+                        <GraduationCap className="h-12 w-12 text-[#facc15]" />
                         <span className="text-3xl font-bold text-white">AMSS Portal</span>
                     </Link>
                     <h1 className="text-2xl font-semibold text-white mt-4">Welcome Back</h1>
@@ -82,7 +82,7 @@ export default function LoginPage() {
                                     value={username}
                                     onChange={(e) => setUsername(e.target.value)}
                                     required
-                                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#60a5fa] focus:border-transparent transition-all"
+                                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#facc15] focus:border-transparent transition-all"
                                     placeholder="Enter your Student/Teacher ID"
                                 />
                             </div>
@@ -103,7 +103,7 @@ export default function LoginPage() {
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required
-                                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#60a5fa] focus:border-transparent transition-all"
+                                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#facc15] focus:border-transparent transition-all"
                                     placeholder="Enter your password"
                                 />
                             </div>
@@ -120,7 +120,7 @@ export default function LoginPage() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full bg-[#60a5fa] text-black font-semibold py-3 rounded-lg hover:bg-[#3b82f6] transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                            className="w-full bg-[#facc15] text-black font-semibold py-3 rounded-lg hover:bg-[#15803d] transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/50 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                         >
                             {loading ? (
                                 <>
@@ -145,7 +145,7 @@ export default function LoginPage() {
                 <div className="text-center mt-6">
                     <Link
                         href="/"
-                        className="text-[#60a5fa] hover:text-[#3b82f6] transition-colors text-sm"
+                        className="text-[#facc15] hover:text-[#15803d] transition-colors text-sm"
                     >
                         ← Back to Home
                     </Link>

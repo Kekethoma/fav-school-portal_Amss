@@ -152,10 +152,10 @@ export default function RegisterStudentPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-4xl mx-auto">
                 <Link href="/principal/dashboard">
-                    <Button variant="ghost" className="mb-6 text-white hover:text-[#60a5fa]">
+                    <Button variant="ghost" className="mb-6 text-white hover:text-[#facc15]">
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Back to Dashboard
                     </Button>
@@ -184,7 +184,7 @@ export default function RegisterStudentPage() {
                                 <div className="flex justify-between items-start">
                                     <div>
                                         <CardTitle className="text-2xl text-white font-bold flex items-center gap-2">
-                                            <ShieldCheck className="h-6 w-6 text-[#60a5fa]" />
+                                            <ShieldCheck className="h-6 w-6 text-[#facc15]" />
                                             {step === 'INPUT' ? 'Advanced Student Enrollment' : step === 'PREVIEW' ? 'Review Application' : 'Success'}
                                         </CardTitle>
                                         <CardDescription className="text-gray-400 mt-1">
@@ -192,7 +192,7 @@ export default function RegisterStudentPage() {
                                         </CardDescription>
                                     </div>
                                     <div className="text-right">
-                                        <span className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase ${step === 'INPUT' ? 'bg-blue-500/20 text-blue-400' : 'bg-green-500/20 text-green-400'}`}>
+                                        <span className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase ${step === 'INPUT' ? 'bg-green-600/20 text-blue-400' : 'bg-green-500/20 text-green-400'}`}>
                                             Step {step === 'INPUT' ? '1' : step === 'PREVIEW' ? '2' : '3'} of 3
                                         </span>
                                     </div>
@@ -203,7 +203,7 @@ export default function RegisterStudentPage() {
                                     <form onSubmit={handleNext} className="space-y-8">
                                         {/* Academic Status */}
                                         <section className="space-y-4">
-                                            <h3 className="text-[#60a5fa] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                            <h3 className="text-[#facc15] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
                                                 <BookOpen className="h-4 w-4" /> Enrollment Context
                                             </h3>
                                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -214,7 +214,7 @@ export default function RegisterStudentPage() {
                                                         value={formData.academicYearId}
                                                         onChange={handleInputChange}
                                                         required
-                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                                                     >
                                                         <option value="">Select Year</option>
                                                         {academicYears.map(ay => (
@@ -229,7 +229,7 @@ export default function RegisterStudentPage() {
                                                         value={formData.level}
                                                         onChange={(e) => setFormData({ ...formData, level: e.target.value, department: '', classId: '' })}
                                                         required
-                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                                                     >
                                                         <option value="">Select Level</option>
                                                         <option value="JSS">Junior Secondary (JSS)</option>
@@ -244,7 +244,7 @@ export default function RegisterStudentPage() {
                                                             value={formData.department}
                                                             onChange={(e) => setFormData({ ...formData, department: e.target.value, classId: '' })}
                                                             required
-                                                            className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                                                            className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                                                         >
                                                             <option value="">Select Department</option>
                                                             <option value="ARTS">Arts</option>
@@ -260,7 +260,7 @@ export default function RegisterStudentPage() {
                                                         value={formData.classId}
                                                         onChange={handleInputChange}
                                                         required
-                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black disabled:opacity-50"
+                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black disabled:opacity-50"
                                                         disabled={!formData.level || (formData.level === 'SSS' && !formData.department)}
                                                     >
                                                         <option value="">{!formData.level ? 'Pick Level First' : (formData.level === 'SSS' && !formData.department) ? 'Pick Department First' : 'Select Class'}</option>
@@ -278,7 +278,7 @@ export default function RegisterStudentPage() {
                                                         value={formData.department}
                                                         onChange={handleInputChange}
                                                         required
-                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                                                     >
                                                         <option value="">Select Department</option>
                                                         <option value="Science">Science (Pure Arts)</option>
@@ -291,22 +291,22 @@ export default function RegisterStudentPage() {
 
                                         {/* Personal Information */}
                                         <section className="space-y-4">
-                                            <h3 className="text-[#60a5fa] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                            <h3 className="text-[#facc15] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
                                                 <User className="h-4 w-4" /> Personal Information
                                             </h3>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-400">Full Name *</label>
-                                                    <input name="name" value={formData.name} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none placeholder:text-gray-700" placeholder="Full legal name" />
+                                                    <input name="name" value={formData.name} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none placeholder:text-gray-700" placeholder="Full legal name" />
                                                 </div>
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-400">Email Address *</label>
-                                                    <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none placeholder:text-gray-700" placeholder="personal/student email" />
+                                                    <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none placeholder:text-gray-700" placeholder="personal/student email" />
                                                 </div>
                                                 <div className="grid grid-cols-2 gap-4">
                                                     <div className="space-y-2">
                                                         <label className="text-xs font-semibold text-gray-400">Gender</label>
-                                                        <select name="gender" value={formData.gender} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black">
+                                                        <select name="gender" value={formData.gender} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black">
                                                             <option value="">Select</option>
                                                             <option value="MALE">Male</option>
                                                             <option value="FEMALE">Female</option>
@@ -314,7 +314,7 @@ export default function RegisterStudentPage() {
                                                     </div>
                                                     <div className="space-y-2">
                                                         <label className="text-xs font-semibold text-gray-400">Date of Birth</label>
-                                                        <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none" />
+                                                        <input type="date" name="dateOfBirth" value={formData.dateOfBirth} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none" />
                                                     </div>
                                                 </div>
                                                 <div className="space-y-2">
@@ -323,7 +323,7 @@ export default function RegisterStudentPage() {
                                                         name="religion"
                                                         value={formData.religion}
                                                         onChange={handleInputChange}
-                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                                                     >
                                                         <option value="">Select Religion</option>
                                                         <option value="Islam">Islam</option>
@@ -334,42 +334,42 @@ export default function RegisterStudentPage() {
                                             </div>
                                             <div className="space-y-2">
                                                 <label className="text-xs font-semibold text-gray-400">Permanent Address</label>
-                                                <textarea name="address" value={formData.address} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none min-h-[80px]" placeholder="Street, City, State" />
+                                                <textarea name="address" value={formData.address} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none min-h-[80px]" placeholder="Street, City, State" />
                                             </div>
                                         </section>
 
                                         {/* Guardian & Emergency */}
                                         <section className="space-y-4 pb-8">
-                                            <h3 className="text-[#60a5fa] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                            <h3 className="text-[#facc15] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
                                                 <Phone className="h-4 w-4" /> Guardian & Safety
                                             </h3>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-400">Guardian Full Name *</label>
-                                                    <input name="guardianName" value={formData.guardianName} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none" placeholder="Primary parent/guardian" />
+                                                    <input name="guardianName" value={formData.guardianName} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none" placeholder="Primary parent/guardian" />
                                                 </div>
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-400">Guardian Phone *</label>
-                                                    <input name="guardianPhone" value={formData.guardianPhone} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none" placeholder="+232 ..." />
+                                                    <input name="guardianPhone" value={formData.guardianPhone} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none" placeholder="+232 ..." />
                                                 </div>
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-400">Guardian Email</label>
-                                                    <input type="email" name="guardianEmail" value={formData.guardianEmail} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none" placeholder="guardian@email.com" />
+                                                    <input type="email" name="guardianEmail" value={formData.guardianEmail} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none" placeholder="guardian@email.com" />
                                                 </div>
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-400">Emergency Contact (Alt Phone)</label>
-                                                    <input name="emergencyContact" value={formData.emergencyContact} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none" placeholder="Secondary contact number" />
+                                                    <input name="emergencyContact" value={formData.emergencyContact} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none" placeholder="Secondary contact number" />
                                                 </div>
                                                 <div className="space-y-2 md:col-span-2">
                                                     <label className="text-xs font-semibold text-gray-400">Previous School Attended</label>
-                                                    <input name="previousSchool" value={formData.previousSchool} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none" placeholder="Name of previous institution" />
+                                                    <input name="previousSchool" value={formData.previousSchool} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none" placeholder="Name of previous institution" />
                                                 </div>
                                             </div>
                                         </section>
 
                                         {error && <div className="p-3 bg-red-500/10 border border-red-500/20 text-red-500 rounded text-xs">{error}</div>}
 
-                                        <Button type="submit" variant="secondary" className="w-full h-14 font-bold text-lg bg-[#60a5fa] text-black hover:bg-[#3b82f6] shadow-xl shadow-[#60a5fa]/10">
+                                        <Button type="submit" variant="secondary" className="w-full h-14 font-bold text-lg bg-[#facc15] text-black hover:bg-[#15803d] shadow-xl shadow-[#facc15]/10">
                                             Proceed to Review
                                         </Button>
                                     </form>
@@ -381,17 +381,17 @@ export default function RegisterStudentPage() {
                                             {/* Academic Column */}
                                             <div className="space-y-6">
                                                 <div className="space-y-3">
-                                                    <h4 className="text-[#60a5fa] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">Academic Placement</h4>
+                                                    <h4 className="text-[#facc15] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">Academic Placement</h4>
                                                     <div className="space-y-2">
                                                         <div className="flex justify-between"><span className="text-gray-500">Academic Year</span> <span className="text-white">{academicYears.find(ay => ay.id === formData.academicYearId)?.name}</span></div>
                                                         <div className="flex justify-between"><span className="text-gray-500">Level</span> <span className="text-white font-bold">{formData.level}</span></div>
                                                         <div className="flex justify-between"><span className="text-gray-500">Assigned Class</span> <span className="text-white">{classes.find(c => c.id === formData.classId)?.name} {classes.find(c => c.id === formData.classId)?.section}</span></div>
-                                                        {formData.department && <div className="flex justify-between"><span className="text-gray-500">Department</span> <span className="text-[#60a5fa]">{formData.department}</span></div>}
+                                                        {formData.department && <div className="flex justify-between"><span className="text-gray-500">Department</span> <span className="text-[#facc15]">{formData.department}</span></div>}
                                                     </div>
                                                 </div>
 
                                                 <div className="space-y-3">
-                                                    <h4 className="text-[#60a5fa] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">Previous Education</h4>
+                                                    <h4 className="text-[#facc15] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">Previous Education</h4>
                                                     <p className="text-white">{formData.previousSchool || 'No record provided'}</p>
                                                 </div>
                                             </div>
@@ -399,7 +399,7 @@ export default function RegisterStudentPage() {
                                             {/* Personal Column */}
                                             <div className="space-y-6">
                                                 <div className="space-y-3">
-                                                    <h4 className="text-[#60a5fa] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">Student Information</h4>
+                                                    <h4 className="text-[#facc15] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">Student Information</h4>
                                                     <div className="space-y-2">
                                                         <div className="flex justify-between"><span className="text-gray-500">Full Name</span> <span className="text-white font-bold">{formData.name}</span></div>
                                                         <div className="flex justify-between"><span className="text-gray-500">Email</span> <span className="text-white">{formData.email}</span></div>
@@ -414,7 +414,7 @@ export default function RegisterStudentPage() {
                                                 </div>
 
                                                 <div className="space-y-3">
-                                                    <h4 className="text-[#60a5fa] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">Guardian Contact</h4>
+                                                    <h4 className="text-[#facc15] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2">Guardian Contact</h4>
                                                     <div className="space-y-2">
                                                         <div className="flex justify-between"><span className="text-gray-500">Guardian</span> <span className="text-white">{formData.guardianName}</span></div>
                                                         <div className="flex justify-between"><span className="text-gray-500">Phone</span> <span className="text-white">{formData.guardianPhone}</span></div>
@@ -453,12 +453,12 @@ export default function RegisterStudentPage() {
                                             </div>
                                             <div className="flex justify-between items-center">
                                                 <span className="text-gray-500 text-sm">Temporary Password</span>
-                                                <span className="text-[#60a5fa] font-mono font-bold text-xl tracking-wider">{credentials?.password}</span>
+                                                <span className="text-[#facc15] font-mono font-bold text-xl tracking-wider">{credentials?.password}</span>
                                             </div>
                                         </div>
 
                                         <div className="flex flex-col gap-4 max-w-sm mx-auto">
-                                            <Button onClick={handleDownload} className="w-full py-6 bg-[#60a5fa] text-black hover:bg-[#3b82f6] font-bold shadow-lg shadow-[#60a5fa]/10">
+                                            <Button onClick={handleDownload} className="w-full py-6 bg-[#facc15] text-black hover:bg-[#15803d] font-bold shadow-lg shadow-[#facc15]/10">
                                                 <Download className="mr-2 h-5 w-5" /> Download Admission Pack
                                             </Button>
                                             <div className="grid grid-cols-2 gap-3">

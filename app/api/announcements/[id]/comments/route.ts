@@ -4,11 +4,12 @@ import { requireAuth } from '@/lib/session'
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
+        const { id } = await params
         const comments = await (db as any).comment.findMany({
-            where: { announcementId: params.id },
+            where: { announcementId: id },
             include: { user: { select: { name: true, role: true } } },
             orderBy: { createdAt: 'asc' }
         })
@@ -20,9 +21,10 @@ export async function GET(
 
 export async function POST(
     request: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     try {
+        const { id } = await params
         const session = await requireAuth()
         const { content } = await request.json()
 
@@ -33,7 +35,7 @@ export async function POST(
         const comment = await (db as any).comment.create({
             data: {
                 content,
-                announcementId: params.id,
+                announcementId: id,
                 userId: session.id
             },
             include: { user: { select: { name: true, role: true } } }

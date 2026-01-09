@@ -87,8 +87,8 @@ export default function AssignmentDetailsPage() {
                                     <div className="grid grid-cols-1 md:grid-cols-2">
                                         <div className="p-6 border-b md:border-b-0 md:border-r border-white/10 space-y-4">
                                             <div className="flex items-center gap-3">
-                                                <div className="h-10 w-10 rounded-full bg-[#1e40af]/20 flex items-center justify-center">
-                                                    <User className="h-5 w-5 text-[#1e40af]" />
+                                                <div className="h-10 w-10 rounded-full bg-[#16a34a]/20 flex items-center justify-center">
+                                                    <User className="h-5 w-5 text-[#16a34a]" />
                                                 </div>
                                                 <div>
                                                     <p className="text-white font-medium">{student.user.name}</p>

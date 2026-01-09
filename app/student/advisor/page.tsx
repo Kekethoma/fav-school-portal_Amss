@@ -56,17 +56,17 @@ export default function AIAdvisorPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-4xl mx-auto flex flex-col h-[calc(100vh-4rem)] md:h-[calc(100vh-8rem)]">
                 <div className="flex justify-between items-center mb-6">
                     <Link href="/student/dashboard">
-                        <Button variant="ghost" className="text-white hover:text-[#60a5fa]">
+                        <Button variant="ghost" className="text-white hover:text-[#facc15]">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Dashboard
                         </Button>
                     </Link>
                     <div className="flex items-center gap-2">
-                        <Sparkles className="h-5 w-5 text-[#60a5fa]" />
+                        <Sparkles className="h-5 w-5 text-[#facc15]" />
                         <h1 className="text-xl font-bold text-white">Academic Advisor</h1>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ export default function AIAdvisorPage() {
                 <Card className="flex-1 flex flex-col border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden">
                     <CardHeader className="border-b border-white/10 bg-white/5">
                         <CardTitle className="text-sm text-gray-400 flex items-center gap-2">
-                            <Bot className="h-4 w-4 text-[#60a5fa]" />
+                            <Bot className="h-4 w-4 text-[#facc15]" />
                             Powered by Google Gemini
                         </CardTitle>
                     </CardHeader>
@@ -86,11 +86,11 @@ export default function AIAdvisorPage() {
                                 className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}
                             >
                                 <div className={`max-w-[80%] p-4 rounded-2xl ${m.role === 'user'
-                                    ? 'bg-[#1e40af] text-white rounded-tr-none'
+                                    ? 'bg-[#16a34a] text-white rounded-tr-none'
                                     : 'bg-white/10 text-gray-200 rounded-tl-none border border-white/10'
                                     }`}>
                                     <div className="flex items-center gap-2 mb-1">
-                                        {m.role === 'user' ? <User className="h-3 w-3" /> : <Bot className="h-3 w-3 text-[#60a5fa]" />}
+                                        {m.role === 'user' ? <User className="h-3 w-3" /> : <Bot className="h-3 w-3 text-[#facc15]" />}
                                         <span className="text-[10px] uppercase tracking-wider font-bold">
                                             {m.role === 'user' ? 'You' : 'Advisor'}
                                         </span>
@@ -102,7 +102,7 @@ export default function AIAdvisorPage() {
                         {loading && (
                             <div className="flex justify-start">
                                 <div className="bg-white/10 text-gray-200 p-4 rounded-2xl rounded-tl-none border border-white/10">
-                                    <Loader2 className="h-4 w-4 animate-spin text-[#60a5fa]" />
+                                    <Loader2 className="h-4 w-4 animate-spin text-[#facc15]" />
                                 </div>
                             </div>
                         )}
@@ -113,7 +113,7 @@ export default function AIAdvisorPage() {
                         <form onSubmit={handleSendMessage} className="flex gap-2">
                             <input
                                 type="text"
-                                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1e40af]"
+                                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#16a34a]"
                                 placeholder="Ask about study tips, grades, or career advice..."
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}

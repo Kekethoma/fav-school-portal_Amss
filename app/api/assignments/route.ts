@@ -19,6 +19,13 @@ export async function GET(req: NextRequest) {
         if (session.role === 'STUDENT') {
             const student = await db.student.findUnique({ where: { userId: session.id } })
             if (student) where.classId = student.classId
+            where.isApproved = true
+        }
+
+        // Principal filtering
+        if (session.role === 'PRINCIPAL') {
+            const unapproved = searchParams.get('unapproved') === 'true'
+            if (unapproved) where.isApproved = false
         }
 
         const assignments = await db.activity.findMany({

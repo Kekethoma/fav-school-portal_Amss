@@ -19,7 +19,8 @@ export async function GET(_request: NextRequest) {
                         class: true,
                         grades: {
                             where: {
-                                academicYear: { isCurrent: true }
+                                academicYear: { isCurrent: true },
+                                isApproved: true
                             },
                             include: { subject: true }
                         }

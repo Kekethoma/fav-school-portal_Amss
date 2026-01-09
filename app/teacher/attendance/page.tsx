@@ -99,16 +99,16 @@ export default function AttendancePage() {
 
     if (loading && !selectedClass) return (
         <div className="min-h-screen bg-black flex items-center justify-center">
-            <Loader2 className="h-8 w-8 text-[#60a5fa] animate-spin" />
+            <Loader2 className="h-8 w-8 text-[#facc15] animate-spin" />
         </div>
     )
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
                     <Link href="/teacher/dashboard">
-                        <Button variant="ghost" className="text-white hover:text-[#60a5fa]">
+                        <Button variant="ghost" className="text-white hover:text-[#facc15]">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Dashboard
                         </Button>
@@ -130,7 +130,7 @@ export default function AttendancePage() {
                                 <label className="block text-xs text-gray-500 mb-2">DATE</label>
                                 <input
                                     type="date"
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white outline-none focus:ring-1 focus:ring-[#60a5fa]"
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white outline-none focus:ring-1 focus:ring-[#facc15]"
                                     value={date}
                                     onChange={(e) => setDate(e.target.value)}
                                 />
@@ -142,7 +142,7 @@ export default function AttendancePage() {
                                         <button
                                             key={c.id}
                                             className={`w-full text-left p-3 rounded-lg border transition-all ${selectedClass === c.id
-                                                ? 'bg-[#1e40af]/30 border-[#60a5fa] text-white'
+                                                ? 'bg-[#16a34a]/30 border-[#facc15] text-white'
                                                 : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10'
                                                 }`}
                                             onClick={() => loadStudents(c.id)}

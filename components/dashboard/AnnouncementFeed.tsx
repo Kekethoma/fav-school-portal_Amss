@@ -43,10 +43,10 @@ export function AnnouncementFeed({ announcements }: { announcements: Announcemen
     return (
         <div className="space-y-4">
             {announcements.map((item) => (
-                <div key={item.id} className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#60a5fa]/30 transition-shadow">
+                <div key={item.id} className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#facc15]/30 transition-shadow">
                     <div className="flex justify-between items-start mb-2">
                         <div className="flex items-center gap-2">
-                            <Megaphone className="h-4 w-4 text-[#60a5fa]" />
+                            <Megaphone className="h-4 w-4 text-[#facc15]" />
                             <h4 className="font-bold text-white">{item.title}</h4>
                         </div>
                         <span className="text-xs text-gray-500">
@@ -66,7 +66,7 @@ export function AnnouncementFeed({ announcements }: { announcements: Announcemen
                             <span>Posted by {item.author.name}</span>
                             <button
                                 onClick={() => setExpandedComments(expandedComments === item.id ? null : item.id)}
-                                className="flex items-center gap-1 hover:text-[#60a5fa] transition-colors ml-4"
+                                className="flex items-center gap-1 hover:text-[#facc15] transition-colors ml-4"
                             >
                                 <MessageCircle className="h-4 w-4" />
                                 Comments
@@ -168,7 +168,7 @@ function CommentSection({ announcementId }: { announcementId: string }) {
                 <Button
                     type="submit"
                     size="sm"
-                    className="h-8 w-8 p-0 flex items-center justify-center bg-[#1e40af] hover:bg-[#1d4ed8]"
+                    className="h-8 w-8 p-0 flex items-center justify-center bg-[#16a34a] hover:bg-[#1d4ed8]"
                     disabled={posting || !newComment.trim()}
                 >
                     {posting ? <Loader2 className="h-3 w-3 animate-spin" /> : <Send className="h-3 w-3" />}

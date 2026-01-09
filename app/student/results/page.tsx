@@ -73,16 +73,16 @@ export default function ResultsViewPage() {
 
     if (loading) return (
         <div className="min-h-screen bg-black flex items-center justify-center">
-            <Loader2 className="h-8 w-8 text-[#60a5fa] animate-spin" />
+            <Loader2 className="h-8 w-8 text-[#facc15] animate-spin" />
         </div>
     )
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-5xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
                     <Link href="/student/dashboard">
-                        <Button variant="ghost" className="text-white hover:text-[#60a5fa]">
+                        <Button variant="ghost" className="text-white hover:text-[#facc15]">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Dashboard
                         </Button>
@@ -106,17 +106,17 @@ export default function ResultsViewPage() {
                                 <CardContent className="p-8">
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                         <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/5">
-                                            <TrendingUp className="h-8 w-8 text-[#60a5fa] mx-auto mb-4" />
+                                            <TrendingUp className="h-8 w-8 text-[#facc15] mx-auto mb-4" />
                                             <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mb-2">Average Score</p>
                                             <p className="text-4xl font-bold text-white">{res.average.toFixed(1)}%</p>
                                         </div>
                                         <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/5">
                                             <Award className="h-8 w-8 text-white mx-auto mb-4" />
                                             <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mb-2">Class Position</p>
-                                            <p className="text-4xl font-bold text-[#60a5fa]">{res.position}</p>
+                                            <p className="text-4xl font-bold text-[#facc15]">{res.position}</p>
                                         </div>
                                         <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/5">
-                                            <TrendingUp className="h-8 w-8 text-[#1e40af] mx-auto mb-4" />
+                                            <TrendingUp className="h-8 w-8 text-[#16a34a] mx-auto mb-4" />
                                             <p className="text-gray-400 text-sm font-medium uppercase tracking-wider mb-2">Total Points</p>
                                             <p className="text-4xl font-bold text-white">{res.totalScore}</p>
                                         </div>

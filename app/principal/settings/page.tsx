@@ -41,11 +41,11 @@ export default function SettingsPage() {
     }, [])
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
                     <Link href="/principal/dashboard">
-                        <Button variant="ghost" className="text-white hover:text-[#60a5fa]">
+                        <Button variant="ghost" className="text-white hover:text-[#facc15]">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Dashboard
                         </Button>
@@ -61,7 +61,7 @@ export default function SettingsPage() {
                     <Card className="border-white/10 bg-black/40 backdrop-blur-sm">
                         <CardHeader className="flex flex-row items-center justify-between border-b border-white/10">
                             <CardTitle className="text-white flex items-center gap-2">
-                                <BookOpen className="h-5 w-5 text-[#60a5fa]" />
+                                <BookOpen className="h-5 w-5 text-[#facc15]" />
                                 Subjects
                             </CardTitle>
                             <Button size="sm" variant="secondary">
@@ -90,7 +90,7 @@ export default function SettingsPage() {
                     <Card className="border-white/10 bg-black/40 backdrop-blur-sm">
                         <CardHeader className="flex flex-row items-center justify-between border-b border-white/10">
                             <CardTitle className="text-white flex items-center gap-2">
-                                <GraduationCap className="h-5 w-5 text-[#1e40af]" />
+                                <GraduationCap className="h-5 w-5 text-[#16a34a]" />
                                 Classes
                             </CardTitle>
                             <Button size="sm" variant="secondary">

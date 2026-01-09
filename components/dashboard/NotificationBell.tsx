@@ -59,7 +59,7 @@ export function NotificationBell() {
             >
                 {unreadCount > 0 ? (
                     <>
-                        <BellDot className="h-5 w-5 text-[#60a5fa] animate-pulse" />
+                        <BellDot className="h-5 w-5 text-[#facc15] animate-pulse" />
                         <span className="absolute top-1 right-1 h-3 w-3 bg-red-600 rounded-full border-2 border-black text-[8px] flex items-center justify-center font-bold">
                             {unreadCount}
                         </span>
@@ -86,7 +86,7 @@ export function NotificationBell() {
                                     <div
                                         key={n.id}
                                         onClick={() => markAsRead(n.id)}
-                                        className={`p-4 cursor-pointer transition-colors ${n.isRead ? 'bg-transparent' : 'bg-[#60a5fa]/5 hover:bg-[#60a5fa]/10'}`}
+                                        className={`p-4 cursor-pointer transition-colors ${n.isRead ? 'bg-transparent' : 'bg-[#facc15]/5 hover:bg-[#facc15]/10'}`}
                                     >
                                         <div className="flex justify-between items-start mb-1">
                                             <h5 className={`text-xs font-bold ${n.isRead ? 'text-gray-400' : 'text-white'}`}>{n.title}</h5>

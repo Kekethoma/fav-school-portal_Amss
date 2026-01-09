@@ -5,7 +5,7 @@ import { generateResourceTags } from '@/lib/ai'
 
 export async function GET(request: NextRequest) {
     try {
-        const session = await requireAuth(['TEACHER', 'PRINCIPAL'])
+        const session = await requireAuth(['TEACHER', 'PRINCIPAL', 'STUDENT'])
 
         let resources;
         if (session.role === 'TEACHER') {
@@ -18,8 +18,19 @@ export async function GET(request: NextRequest) {
                 where: { teacherId: teacher.id },
                 orderBy: { uploadedAt: 'desc' }
             })
+        } else if (session.role === 'STUDENT') {
+            resources = await (db as any).teachingResource.findMany({
+                where: { isApproved: true },
+                include: { teacher: { include: { user: true } } },
+                orderBy: { uploadedAt: 'desc' }
+            })
         } else {
-            resources = await db.teachingResource.findMany({
+            // Principal
+            const { searchParams } = new URL(request.url)
+            const unapproved = searchParams.get('unapproved') === 'true'
+
+            resources = await (db as any).teachingResource.findMany({
+                where: unapproved ? { isApproved: false } : {},
                 include: { teacher: { include: { user: true } } },
                 orderBy: { uploadedAt: 'desc' }
             })
@@ -27,7 +38,7 @@ export async function GET(request: NextRequest) {
 
 
 
-        const parsedResources = resources!.map(r => ({
+        const parsedResources = resources!.map((r: any) => ({
             ...r,
             tags: r.tags ? r.tags.split(',') : []
         }))

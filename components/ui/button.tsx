@@ -18,8 +18,8 @@ export function Button({
     const baseStyles = 'font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed'
 
     const variants = {
-        primary: 'bg-[#1e40af] text-white hover:bg-[#3b82f6] hover:shadow-lg',
-        secondary: 'bg-[#60a5fa] text-black hover:bg-[#3b82f6] hover:shadow-lg hover:shadow-yellow-500/50',
+        primary: 'bg-[#16a34a] text-white hover:bg-[#15803d] hover:shadow-lg',
+        secondary: 'bg-[#facc15] text-black hover:bg-[#15803d] hover:shadow-lg hover:shadow-yellow-500/50',
         outline: 'border-2 border-white/20 text-white hover:bg-white/10',
         ghost: 'text-white hover:bg-white/10'
     }

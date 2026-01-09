@@ -44,7 +44,7 @@ export function SubjectManagement() {
         <Card className="border-white/10 bg-black/40 backdrop-blur-sm">
             <CardHeader className="border-b border-white/5">
                 <CardTitle className="text-white flex items-center gap-2 text-lg">
-                    <BookOpen className="h-5 w-5 text-[#60a5fa]" />
+                    <BookOpen className="h-5 w-5 text-[#facc15]" />
                     Academic Subject Manager
                 </CardTitle>
                 <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Expand your institution's curriculum</p>
@@ -59,7 +59,7 @@ export function SubjectManagement() {
                                 value={formData.name}
                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                 required
-                                className="bg-white/5 border-white/10 text-white focus:ring-[#60a5fa]"
+                                className="bg-white/5 border-white/10 text-white focus:ring-[#facc15]"
                             />
                         </div>
                         <div className="space-y-2">
@@ -69,7 +69,7 @@ export function SubjectManagement() {
                                 value={formData.code}
                                 onChange={(e) => setFormData({ ...formData, code: e.target.value.toUpperCase() })}
                                 required
-                                className="bg-white/5 border-white/10 text-white focus:ring-[#60a5fa]"
+                                className="bg-white/5 border-white/10 text-white focus:ring-[#facc15]"
                             />
                         </div>
                     </div>
@@ -80,7 +80,7 @@ export function SubjectManagement() {
                             <select
                                 value={formData.department}
                                 onChange={(e) => setFormData({ ...formData, department: e.target.value })}
-                                className="w-full h-10 px-3 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:ring-1 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                                className="w-full h-10 px-3 bg-white/5 border border-white/10 rounded-lg text-sm text-white focus:ring-1 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                             >
                                 <option value="GENERAL">General/All</option>
                                 <option value="ARTS">Arts</option>
@@ -96,14 +96,14 @@ export function SubjectManagement() {
                             placeholder="Brief overview of the subject content..."
                             value={formData.description}
                             onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                            className="bg-white/5 border-white/10 text-white focus:ring-[#60a5fa] min-h-[80px]"
+                            className="bg-white/5 border-white/10 text-white focus:ring-[#facc15] min-h-[80px]"
                         />
                     </div>
 
                     <Button
                         type="submit"
                         disabled={loading}
-                        className="w-full bg-[#60a5fa] text-black hover:bg-[#3b82f6] font-bold py-6 text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#60a5fa]/10"
+                        className="w-full bg-[#facc15] text-black hover:bg-[#15803d] font-bold py-6 text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#facc15]/10"
                     >
                         {loading ? (
                             <Loader2 className="h-5 w-5 animate-spin" />

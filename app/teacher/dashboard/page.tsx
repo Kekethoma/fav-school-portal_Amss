@@ -77,7 +77,7 @@ export default async function TeacherDashboard() {
     })
 
     return (
-        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-[#1e40af]">
+        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-[#16a34a]">
             {/* Header */}
             <header className="bg-background/80 dark:bg-black/30 backdrop-blur-md border-b border-border dark:border-white/10 sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -124,7 +124,7 @@ export default async function TeacherDashboard() {
                 {/* Quick Actions */}
                 <Card className="mb-8 border-white/10 bg-black/40 backdrop-blur-sm">
                     <CardHeader>
-                        <CardTitle className="text-[#60a5fa]">Teacher Quick Actions</CardTitle>
+                        <CardTitle className="text-[#facc15]">Teacher Quick Actions</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -185,7 +185,7 @@ export default async function TeacherDashboard() {
                                                 <p className="text-gray-400 text-sm">{assignment.class.name} ({assignment.class.section})</p>
                                             </div>
                                             <div className="text-right">
-                                                <p className="text-[#60a5fa] text-sm">Active</p>
+                                                <p className="text-[#facc15] text-sm">Active</p>
                                             </div>
                                         </div>
                                     ))
@@ -216,7 +216,7 @@ export default async function TeacherDashboard() {
                                                 </p>
                                             </div>
                                             <div className="text-right">
-                                                <p className="text-[#60a5fa] font-bold text-lg">{grade.total}%</p>
+                                                <p className="text-[#facc15] font-bold text-lg">{grade.total}%</p>
                                                 <p className="text-gray-400 text-xs">Term {grade.term}</p>
                                             </div>
                                         </div>

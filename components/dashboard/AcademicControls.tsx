@@ -56,7 +56,7 @@ export function AcademicControls() {
         <Card className="bg-black/40 border-white/10 h-fit">
             <CardHeader className="border-b border-white/5 pb-4">
                 <CardTitle className="text-white flex items-center gap-2 text-lg">
-                    <Settings2 className="h-5 w-5 text-[#60a5fa]" />
+                    <Settings2 className="h-5 w-5 text-[#facc15]" />
                     Academic Session Controls
                 </CardTitle>
                 <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Configure dynamic system access</p>
@@ -74,7 +74,7 @@ export function AcademicControls() {
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
-                        {updating === 'isGradeSubmissionOpen' && <Loader2 className="h-4 w-4 text-[#60a5fa] animate-spin" />}
+                        {updating === 'isGradeSubmissionOpen' && <Loader2 className="h-4 w-4 text-[#facc15] animate-spin" />}
                         <Switch
                             checked={config.isGradeSubmissionOpen}
                             onCheckedChange={(val) => handleToggle('isGradeSubmissionOpen', val)}
@@ -86,7 +86,7 @@ export function AcademicControls() {
                 {/* Registration */}
                 <div className="flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-xl transition-all hover:bg-white/10">
                     <div className="flex items-center gap-4">
-                        <div className={`p-2 rounded-lg ${config.isRegistrationOpen ? 'bg-blue-500/20 text-blue-400' : 'bg-orange-500/20 text-orange-400'}`}>
+                        <div className={`p-2 rounded-lg ${config.isRegistrationOpen ? 'bg-green-600/20 text-blue-400' : 'bg-orange-500/20 text-orange-400'}`}>
                             <UserPlus className="h-5 w-5" />
                         </div>
                         <div>
@@ -95,7 +95,7 @@ export function AcademicControls() {
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
-                        {updating === 'isRegistrationOpen' && <Loader2 className="h-4 w-4 text-[#60a5fa] animate-spin" />}
+                        {updating === 'isRegistrationOpen' && <Loader2 className="h-4 w-4 text-[#facc15] animate-spin" />}
                         <Switch
                             checked={config.isRegistrationOpen}
                             onCheckedChange={(val) => handleToggle('isRegistrationOpen', val)}
@@ -107,7 +107,7 @@ export function AcademicControls() {
                 {/* Term Management */}
                 <div className="p-4 bg-white/5 border border-white/5 rounded-xl space-y-3">
                     <div className="flex items-center gap-2 mb-2">
-                        <Calendar className="h-4 w-4 text-[#60a5fa]" />
+                        <Calendar className="h-4 w-4 text-[#facc15]" />
                         <span className="text-xs font-bold text-gray-300 uppercase">Current Academic Window</span>
                     </div>
                     <div className="grid grid-cols-3 gap-2">
@@ -117,7 +117,7 @@ export function AcademicControls() {
                                 onClick={() => handleToggle('currentTerm', t)}
                                 disabled={!!updating}
                                 className={`py-2 rounded-lg text-xs font-black transition-all ${config.currentTerm === t
-                                        ? 'bg-[#60a5fa] text-black ring-2 ring-[#60a5fa]/50'
+                                        ? 'bg-[#facc15] text-black ring-2 ring-[#facc15]/50'
                                         : 'bg-white/5 text-gray-500 hover:bg-white/10'
                                     }`}
                             >

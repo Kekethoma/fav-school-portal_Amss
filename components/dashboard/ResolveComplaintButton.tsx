@@ -36,7 +36,7 @@ export function ResolveComplaintButton({ complaintId, onResolved }: ResolveCompl
             size="sm"
             onClick={handleResolve}
             disabled={loading}
-            className="h-6 text-[#60a5fa] hover:text-white p-0 flex items-center gap-1"
+            className="h-6 text-[#facc15] hover:text-white p-0 flex items-center gap-1"
         >
             {loading ? <Loader2 className="h-3 w-3 animate-spin" /> : <CheckCircle className="h-3 w-3" />}
             Resolve

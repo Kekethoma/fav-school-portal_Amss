@@ -19,7 +19,7 @@ export function PrincipalDashboardContent({ session, stats, recentGrades, announ
     const router = useRouter()
 
     return (
-        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-[#1e40af]">
+        <div className="min-h-screen bg-background text-foreground transition-colors duration-300 dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-[#16a34a]">
             <header className="bg-background/80 dark:bg-black/30 backdrop-blur-md border-b border-border dark:border-white/10 sticky top-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                     <div className="flex justify-between items-center">
@@ -56,8 +56,9 @@ export function PrincipalDashboardContent({ session, stats, recentGrades, announ
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                                 <Link href="/principal/students/register"><Button variant="primary" className="w-full">Register Student</Button></Link>
                                 <Link href="/principal/teachers/register"><Button variant="primary" className="w-full">Register Teacher</Button></Link>
-                                <Link href="/principal/reports"><Button variant="outline" className="w-full border-[#60a5fa] text-[#60a5fa] hover:bg-[#60a5fa]/10 font-bold">Advanced Reports</Button></Link>
+                                <Link href="/principal/reports"><Button variant="outline" className="w-full border-[#facc15] text-[#facc15] hover:bg-[#facc15]/10 font-bold">Advanced Reports</Button></Link>
                                 <Link href="/principal/audit"><Button variant="outline" className="w-full">Audit Logs</Button></Link>
+                                <Link href="/principal/approvals"><Button variant="outline" className="w-full border-yellow-500/50 text-yellow-500 hover:bg-yellow-500/10">Approvals</Button></Link>
                             </div>
                         </CardContent>
                     </Card>
@@ -77,7 +78,7 @@ export function PrincipalDashboardContent({ session, stats, recentGrades, announ
                                                 <p className="text-gray-400 text-sm">{grade.subject.name}</p>
                                             </div>
                                             <div className="text-right">
-                                                <p className="text-[#60a5fa] font-bold text-lg">{grade.total}%</p>
+                                                <p className="text-[#facc15] font-bold text-lg">{grade.total}%</p>
                                                 <p className="text-gray-400 text-sm">Grade: {grade.grade}</p>
                                             </div>
                                         </div>
@@ -104,7 +105,7 @@ export function PrincipalDashboardContent({ session, stats, recentGrades, announ
                         <Card className="bg-black/40 border-white/10">
                             <CardHeader>
                                 <CardTitle className="text-white flex items-center gap-2">
-                                    <Bell className="h-5 w-5 text-[#60a5fa]" /> Review Announcements
+                                    <Bell className="h-5 w-5 text-[#facc15]" /> Review Announcements
                                 </CardTitle>
                             </CardHeader>
                             <CardContent><AnnouncementFeed announcements={announcements} /></CardContent>

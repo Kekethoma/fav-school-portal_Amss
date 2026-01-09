@@ -162,10 +162,10 @@ export default function RegisterTeacherPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-4xl mx-auto">
                 <Link href="/principal/dashboard">
-                    <Button variant="ghost" className="mb-6 text-white hover:text-[#60a5fa]">
+                    <Button variant="ghost" className="mb-6 text-white hover:text-[#facc15]">
                         <ArrowLeft className="mr-2 h-4 w-4" />
                         Back to Dashboard
                     </Button>
@@ -193,8 +193,8 @@ export default function RegisterTeacherPage() {
                             <CardHeader className="border-b border-white/5 pb-6">
                                 <div className="flex justify-between items-start">
                                     <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 bg-[#60a5fa]/20 rounded-xl flex items-center justify-center">
-                                            <UserPlus className="h-6 w-6 text-[#60a5fa]" />
+                                        <div className="w-12 h-12 bg-[#facc15]/20 rounded-xl flex items-center justify-center">
+                                            <UserPlus className="h-6 w-6 text-[#facc15]" />
                                         </div>
                                         <div>
                                             <CardTitle className="text-2xl text-white font-bold">
@@ -215,7 +215,7 @@ export default function RegisterTeacherPage() {
                                     <form onSubmit={handleNext} className="space-y-8">
                                         {/* Academic Year Context */}
                                         <section className="space-y-4">
-                                            <h3 className="text-[#60a5fa] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                            <h3 className="text-[#facc15] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
                                                 <BookOpen className="h-4 w-4" /> Registration Context
                                             </h3>
                                             <div className="max-w-md space-y-2">
@@ -225,7 +225,7 @@ export default function RegisterTeacherPage() {
                                                     value={formData.academicYearId}
                                                     onChange={handleInputChange}
                                                     required
-                                                    className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                                                    className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                                                 >
                                                     <option value="">Select Year</option>
                                                     {academicYears.map(ay => (
@@ -237,28 +237,28 @@ export default function RegisterTeacherPage() {
 
                                         {/* Personal Profile */}
                                         <section className="space-y-4">
-                                            <h3 className="text-[#60a5fa] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                            <h3 className="text-[#facc15] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
                                                 <Plus className="h-4 w-4" /> Personal Profile
                                             </h3>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-400">Full Name *</label>
-                                                    <input name="name" value={formData.name} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white outline-none focus:ring-2 focus:ring-[#60a5fa]" placeholder="Dr./Mr./Mrs. Name" />
+                                                    <input name="name" value={formData.name} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white outline-none focus:ring-2 focus:ring-[#facc15]" placeholder="Dr./Mr./Mrs. Name" />
                                                 </div>
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-400">Official Email *</label>
-                                                    <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white outline-none focus:ring-2 focus:ring-[#60a5fa]" placeholder="teacher@school.com" />
+                                                    <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white outline-none focus:ring-2 focus:ring-[#facc15]" placeholder="teacher@school.com" />
                                                 </div>
                                                 <div className="space-y-2">
                                                     <label className="text-xs font-semibold text-gray-400">Phone Number</label>
-                                                    <input name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white outline-none focus:ring-2 focus:ring-[#60a5fa]" placeholder="+232-..." />
+                                                    <input name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white outline-none focus:ring-2 focus:ring-[#facc15]" placeholder="+232-..." />
                                                 </div>
                                             </div>
                                         </section>
 
                                         {/* Professional Background */}
                                         <section className="space-y-4">
-                                            <h3 className="text-[#60a5fa] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                            <h3 className="text-[#facc15] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
                                                 <GraduationCap className="h-4 w-4" /> Professional Background
                                             </h3>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -269,7 +269,7 @@ export default function RegisterTeacherPage() {
                                                         value={formData.qualification}
                                                         onChange={handleInputChange}
                                                         required
-                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                                                     >
                                                         <option value="">Select Qualification</option>
                                                         <option value="B.Ed">B.Ed (Bachelor of Education)</option>
@@ -290,7 +290,7 @@ export default function RegisterTeacherPage() {
                                                         name="specialization"
                                                         value={formData.specialization}
                                                         onChange={handleInputChange}
-                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                                                        className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white focus:ring-2 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                                                     >
                                                         <option value="">Select Area</option>
                                                         <option value="Mathematics">Mathematics</option>
@@ -307,17 +307,17 @@ export default function RegisterTeacherPage() {
                                             </div>
                                             <div className="space-y-2">
                                                 <label className="text-xs font-semibold text-gray-400">Key Skills / Certifications</label>
-                                                <textarea name="skills" value={formData.skills} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white outline-none focus:ring-2 focus:ring-[#60a5fa] min-h-[80px]" placeholder="Soft skills, teaching methodologies, ICT certifications..." />
+                                                <textarea name="skills" value={formData.skills} onChange={handleInputChange} className="w-full px-4 py-2.5 bg-white/5 border border-white/10 rounded-lg text-white outline-none focus:ring-2 focus:ring-[#facc15] min-h-[80px]" placeholder="Soft skills, teaching methodologies, ICT certifications..." />
                                             </div>
                                         </section>
 
                                         {/* Initial Assignments */}
                                         <section className="space-y-4">
                                             <div className="flex justify-between items-center">
-                                                <h3 className="text-[#60a5fa] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
+                                                <h3 className="text-[#facc15] text-sm font-bold uppercase tracking-wider flex items-center gap-2">
                                                     <Briefcase className="h-4 w-4" /> Class & Subject Assignments
                                                 </h3>
-                                                <Button type="button" onClick={addAssignment} variant="outline" size="sm" className="bg-[#60a5fa]/10 border-[#60a5fa]/20 text-[#60a5fa] hover:bg-[#60a5fa]/20">
+                                                <Button type="button" onClick={addAssignment} variant="outline" size="sm" className="bg-[#facc15]/10 border-[#facc15]/20 text-[#facc15] hover:bg-[#facc15]/20">
                                                     <Plus className="h-4 w-4 mr-1" /> Add Assignment
                                                 </Button>
                                             </div>
@@ -363,7 +363,7 @@ export default function RegisterTeacherPage() {
 
                                         {error && <div className="p-3 bg-red-500/10 border border-red-500/20 text-red-500 rounded text-xs">{error}</div>}
 
-                                        <Button type="submit" variant="secondary" className="w-full h-14 font-bold text-lg bg-[#60a5fa] text-black hover:bg-[#3b82f6] shadow-xl shadow-[#60a5fa]/10">
+                                        <Button type="submit" variant="secondary" className="w-full h-14 font-bold text-lg bg-[#facc15] text-black hover:bg-[#15803d] shadow-xl shadow-[#facc15]/10">
                                             Proceed to Review
                                         </Button>
                                     </form>
@@ -373,7 +373,7 @@ export default function RegisterTeacherPage() {
                                     <div className="space-y-8 animate-fadeIn">
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                                             <div className="space-y-4">
-                                                <h4 className="text-[#60a5fa] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2 flex items-center gap-2"><Plus className="h-3 w-3" /> Basic Information</h4>
+                                                <h4 className="text-[#facc15] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2 flex items-center gap-2"><Plus className="h-3 w-3" /> Basic Information</h4>
                                                 <div className="space-y-2">
                                                     <div className="flex justify-between"><span className="text-gray-500">Name</span> <span className="text-white font-bold">{formData.name}</span></div>
                                                     <div className="flex justify-between"><span className="text-gray-500">Email</span> <span className="text-white">{formData.email}</span></div>
@@ -382,7 +382,7 @@ export default function RegisterTeacherPage() {
                                                 </div>
                                             </div>
                                             <div className="space-y-4">
-                                                <h4 className="text-[#60a5fa] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2 flex items-center gap-2"><GraduationCap className="h-3 w-3" /> Professional Background</h4>
+                                                <h4 className="text-[#facc15] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2 flex items-center gap-2"><GraduationCap className="h-3 w-3" /> Professional Background</h4>
                                                 <div className="space-y-2">
                                                     <div className="flex justify-between"><span className="text-gray-500">Qualification</span> <span className="text-white">{formData.qualification}</span></div>
                                                     <div className="flex justify-between"><span className="text-gray-500">Specialization</span> <span className="text-white">{formData.specialization || 'N/A'}</span></div>
@@ -395,12 +395,12 @@ export default function RegisterTeacherPage() {
                                         </div>
 
                                         <div className="space-y-4">
-                                            <h4 className="text-[#60a5fa] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2 flex items-center gap-2"><Briefcase className="h-3 w-3" /> Initial Assignments ({formData.assignments.length})</h4>
+                                            <h4 className="text-[#facc15] text-xs font-bold uppercase tracking-widest border-b border-white/10 pb-2 flex items-center gap-2"><Briefcase className="h-3 w-3" /> Initial Assignments ({formData.assignments.length})</h4>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                                                 {formData.assignments.map((a, i) => (
                                                     <div key={i} className="px-4 py-2 bg-white/5 rounded-lg border border-white/10 text-xs text-gray-300 flex justify-between">
                                                         <span>{subjects.find(s => s.id === a.subjectId)?.name}</span>
-                                                        <span className="text-[#60a5fa]">{classes.find(c => c.id === a.classId)?.name} {classes.find(c => c.id === a.classId)?.section}</span>
+                                                        <span className="text-[#facc15]">{classes.find(c => c.id === a.classId)?.name} {classes.find(c => c.id === a.classId)?.section}</span>
                                                     </div>
                                                 ))}
                                                 {formData.assignments.length === 0 && <p className="text-gray-600 italic text-sm">No initial assignments</p>}
@@ -436,12 +436,12 @@ export default function RegisterTeacherPage() {
                                             </div>
                                             <div className="flex justify-between items-center">
                                                 <span className="text-gray-500 text-sm">Temporary Password</span>
-                                                <span className="text-[#60a5fa] font-mono font-bold text-xl tracking-wider">{credentials?.password}</span>
+                                                <span className="text-[#facc15] font-mono font-bold text-xl tracking-wider">{credentials?.password}</span>
                                             </div>
                                         </div>
 
                                         <div className="flex flex-col gap-4 max-w-sm mx-auto">
-                                            <Button onClick={handleDownload} className="w-full py-6 bg-[#60a5fa] text-black hover:bg-[#3b82f6] font-bold shadow-lg shadow-[#60a5fa]/10">
+                                            <Button onClick={handleDownload} className="w-full py-6 bg-[#facc15] text-black hover:bg-[#15803d] font-bold shadow-lg shadow-[#facc15]/10">
                                                 <Download className="mr-2 h-5 w-5" /> Download Enrollment Pack
                                             </Button>
                                             <div className="grid grid-cols-2 gap-3">

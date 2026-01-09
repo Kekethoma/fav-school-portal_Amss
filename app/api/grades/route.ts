@@ -151,7 +151,9 @@ export async function POST(request: NextRequest) {
                 total,
                 grade,
                 remark,
-                teacherId: teacher.id
+                teacherId: teacher.id,
+                isApproved: false, // Reset approval on edit
+                approvedBy: null
             },
             create: {
                 studentId,

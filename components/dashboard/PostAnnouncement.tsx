@@ -35,7 +35,7 @@ export function PostAnnouncement() {
         <Card className="bg-black/40 border-white/10 backdrop-blur-sm">
             <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-lg font-bold text-white">
-                    <Megaphone className="h-5 w-5 text-[#60a5fa]" />
+                    <Megaphone className="h-5 w-5 text-[#facc15]" />
                     Post Announcement
                 </CardTitle>
             </CardHeader>
@@ -43,21 +43,21 @@ export function PostAnnouncement() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <input
                         required
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-1 focus:ring-[#60a5fa] outline-none"
+                        className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-1 focus:ring-[#facc15] outline-none"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         placeholder="Title"
                     />
                     <textarea
                         required
-                        className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white h-24 resize-none focus:ring-1 focus:ring-[#60a5fa] outline-none"
+                        className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white h-24 resize-none focus:ring-1 focus:ring-[#facc15] outline-none"
                         value={content}
                         onChange={(e) => setContent(e.target.value)}
                         placeholder="Message content..."
                     />
                     <div className="flex gap-2">
                         <select
-                            className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-1 focus:ring-[#60a5fa] outline-none [&>option]:bg-black"
+                            className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:ring-1 focus:ring-[#facc15] outline-none [&>option]:bg-black"
                             value={audience}
                             onChange={(e) => setAudience(e.target.value)}
                         >
@@ -65,7 +65,7 @@ export function PostAnnouncement() {
                             <option value="TEACHERS">Teachers Only</option>
                             <option value="STUDENTS">Students Only</option>
                         </select>
-                        <Button type="submit" disabled={loading} className="flex-1 bg-[#1e40af] hover:bg-[#600018] text-white">
+                        <Button type="submit" disabled={loading} className="flex-1 bg-[#16a34a] hover:bg-[#600018] text-white">
                             {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="mr-2 h-4 w-4" />}
                             Post
                         </Button>

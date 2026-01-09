@@ -58,7 +58,7 @@ export function SubmitAssignmentModal({ assignmentId, assignmentTitle }: SubmitA
                             name="content"
                             placeholder="Type your submission here..."
                             required
-                            className="bg-white/5 border-white/10 h-48 focus:ring-[#1e40af]"
+                            className="bg-white/5 border-white/10 h-48 focus:ring-[#16a34a]"
                         />
                     </div>
                     <div className="flex justify-end gap-3 mt-6">

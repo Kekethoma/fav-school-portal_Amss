@@ -83,22 +83,22 @@ export default function LessonPlannerPage() {
 
     if (loading) return (
         <div className="min-h-screen bg-black flex items-center justify-center">
-            <Loader2 className="h-8 w-8 text-[#60a5fa] animate-spin" />
+            <Loader2 className="h-8 w-8 text-[#facc15] animate-spin" />
         </div>
     )
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
                     <Link href="/teacher/dashboard">
-                        <Button variant="ghost" className="text-white hover:text-[#60a5fa]">
+                        <Button variant="ghost" className="text-white hover:text-[#facc15]">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Dashboard
                         </Button>
                     </Link>
                     <div className="flex items-center gap-2">
-                        <Sparkles className="h-5 w-5 text-[#60a5fa]" />
+                        <Sparkles className="h-5 w-5 text-[#facc15]" />
                         <h1 className="text-2xl font-bold text-white">AI Lesson Planner</h1>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ export default function LessonPlannerPage() {
                                 <div>
                                     <label className="block text-sm font-medium text-gray-400 mb-2">Subject</label>
                                     <select
-                                        className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white outline-none focus:ring-2 focus:ring-[#1e40af]"
+                                        className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white outline-none focus:ring-2 focus:ring-[#16a34a]"
                                         value={selectedSubject}
                                         onChange={(e) => setSelectedSubject(e.target.value)}
                                         required
@@ -129,7 +129,7 @@ export default function LessonPlannerPage() {
                                     <label className="block text-sm font-medium text-gray-400 mb-2">Topic / Title</label>
                                     <input
                                         type="text"
-                                        className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white outline-none focus:ring-2 focus:ring-[#1e40af]"
+                                        className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white outline-none focus:ring-2 focus:ring-[#16a34a]"
                                         placeholder="e.g. Introduction to Photosynthesis"
                                         value={topic}
                                         onChange={(e) => setTopic(e.target.value)}
@@ -152,10 +152,10 @@ export default function LessonPlannerPage() {
                     {/* Preview or History */}
                     <div className="lg:col-span-2 space-y-6">
                         {previewPlan ? (
-                            <Card className="border-[#60a5fa]/30 bg-black/60 backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-500">
+                            <Card className="border-[#facc15]/30 bg-black/60 backdrop-blur-md animate-in fade-in slide-in-from-bottom-4 duration-500">
                                 <CardHeader className="flex flex-row items-center justify-between border-b border-white/10">
                                     <div>
-                                        <CardTitle className="text-[#60a5fa]">{previewPlan.topic}</CardTitle>
+                                        <CardTitle className="text-[#facc15]">{previewPlan.topic}</CardTitle>
                                         <p className="text-xs text-gray-400 mt-1">{previewPlan.subject.name}</p>
                                     </div>
                                     <div className="flex gap-2">
@@ -184,12 +184,12 @@ export default function LessonPlannerPage() {
                                             plans.map(plan => (
                                                 <div
                                                     key={plan.id}
-                                                    className="flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-lg hover:border-[#60a5fa]/50 cursor-pointer transition-all"
+                                                    className="flex items-center justify-between p-4 bg-white/5 border border-white/5 rounded-lg hover:border-[#facc15]/50 cursor-pointer transition-all"
                                                     onClick={() => setPreviewPlan(plan)}
                                                 >
                                                     <div className="flex items-center gap-4">
                                                         <div className="w-10 h-10 bg-maroon-900/40 rounded flex items-center justify-center">
-                                                            <FileText className="h-5 w-5 text-[#1e40af]" />
+                                                            <FileText className="h-5 w-5 text-[#16a34a]" />
                                                         </div>
                                                         <div>
                                                             <p className="text-white font-medium">{plan.topic}</p>

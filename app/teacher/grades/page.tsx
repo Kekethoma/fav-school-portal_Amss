@@ -172,17 +172,17 @@ export default function GradeEntryPage() {
     if (loading && assignments.length === 0) {
         return (
             <div className="min-h-screen bg-black flex items-center justify-center">
-                <Loader2 className="h-8 w-8 text-[#60a5fa] animate-spin" />
+                <Loader2 className="h-8 w-8 text-[#facc15] animate-spin" />
             </div>
         )
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between items-center mb-8">
                     <Link href="/teacher/dashboard">
-                        <Button variant="ghost" className="text-white hover:text-[#60a5fa]">
+                        <Button variant="ghost" className="text-white hover:text-[#facc15]">
                             <ArrowLeft className="mr-2 h-4 w-4" />
                             Dashboard
                         </Button>
@@ -194,13 +194,13 @@ export default function GradeEntryPage() {
                     {/* Filters */}
                     <Card className="lg:col-span-1 border-white/10 bg-black/40 backdrop-blur-sm h-fit">
                         <CardHeader>
-                            <CardTitle className="text-lg text-[#60a5fa]">Selection</CardTitle>
+                            <CardTitle className="text-lg text-[#facc15]">Selection</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <div>
                                 <label className="block text-sm font-medium text-gray-400 mb-2">Class & Subject</label>
                                 <select
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white focus:ring-2 focus:ring-[#1e40af] outline-none"
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white focus:ring-2 focus:ring-[#16a34a] outline-none"
                                     value={selectedAssignment}
                                     onChange={(e) => setSelectedAssignment(e.target.value)}
                                 >
@@ -216,7 +216,7 @@ export default function GradeEntryPage() {
                             <div>
                                 <label className="block text-sm font-medium text-gray-400 mb-2">Term</label>
                                 <select
-                                    className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white focus:ring-2 focus:ring-[#1e40af] outline-none"
+                                    className="w-full bg-white/5 border border-white/10 rounded-lg p-2 text-white focus:ring-2 focus:ring-[#16a34a] outline-none"
                                     value={term}
                                     onChange={(e) => setTerm(e.target.value)}
                                 >
@@ -294,7 +294,7 @@ export default function GradeEntryPage() {
                                                             type="number"
                                                             max="20"
                                                             min="0"
-                                                            className="w-16 bg-white/5 border border-white/10 rounded p-1 text-center text-white focus:ring-1 focus:ring-[#60a5fa] outline-none"
+                                                            className="w-16 bg-white/5 border border-white/10 rounded p-1 text-center text-white focus:ring-1 focus:ring-[#facc15] outline-none"
                                                             value={s.ca1}
                                                             onChange={(e) => handleGradeChange(s.studentId, 'ca1', e.target.value)}
                                                         />
@@ -304,7 +304,7 @@ export default function GradeEntryPage() {
                                                             type="number"
                                                             max="20"
                                                             min="0"
-                                                            className="w-16 bg-white/5 border border-white/10 rounded p-1 text-center text-white focus:ring-1 focus:ring-[#60a5fa] outline-none"
+                                                            className="w-16 bg-white/5 border border-white/10 rounded p-1 text-center text-white focus:ring-1 focus:ring-[#facc15] outline-none"
                                                             value={s.ca2}
                                                             onChange={(e) => handleGradeChange(s.studentId, 'ca2', e.target.value)}
                                                         />
@@ -314,7 +314,7 @@ export default function GradeEntryPage() {
                                                             type="number"
                                                             max="60"
                                                             min="0"
-                                                            className="w-16 bg-white/5 border border-white/10 rounded p-1 text-center text-white focus:ring-1 focus:ring-[#60a5fa] outline-none"
+                                                            className="w-16 bg-white/5 border border-white/10 rounded p-1 text-center text-white focus:ring-1 focus:ring-[#facc15] outline-none"
                                                             value={s.exam}
                                                             onChange={(e) => handleGradeChange(s.studentId, 'exam', e.target.value)}
                                                         />
@@ -325,7 +325,7 @@ export default function GradeEntryPage() {
                                                     <td className="py-4 px-2 text-center">
                                                         <span className={`font-bold ${s.grade === 'A' ? 'text-green-400' :
                                                             s.grade === 'B' ? 'text-blue-400' :
-                                                                s.grade === 'F' ? 'text-red-400' : 'text-[#60a5fa]'
+                                                                s.grade === 'F' ? 'text-red-400' : 'text-[#facc15]'
                                                             }`}>
                                                             {s.grade}
                                                         </span>

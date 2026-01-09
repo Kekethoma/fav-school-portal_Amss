@@ -65,7 +65,7 @@ export function GradeApprovalList() {
                     <div>
                         <p className="text-white font-medium">{grade.student.user.name}</p>
                         <p className="text-xs text-gray-500">
-                            {grade.subject.name} • Total: <span className="text-[#60a5fa] font-bold">{grade.total}%</span>
+                            {grade.subject.name} • Total: <span className="text-[#facc15] font-bold">{grade.total}%</span>
                         </p>
                         <p className="text-[10px] text-gray-600">Entered by Teacher ID: {grade.teacherId}</p>
                     </div>

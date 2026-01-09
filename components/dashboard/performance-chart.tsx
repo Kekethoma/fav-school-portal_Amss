@@ -25,14 +25,14 @@ export function PerformanceChart({ data }: { data: ChartData[] }) {
                     />
                     <Tooltip
                         contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid #333' }}
-                        itemStyle={{ color: '#60a5fa' }}
+                        itemStyle={{ color: '#facc15' }}
                     />
                     <Line
                         type="monotone"
                         dataKey="score"
-                        stroke="#60a5fa"
+                        stroke="#facc15"
                         strokeWidth={2}
-                        dot={{ fill: '#1e40af', stroke: '#60a5fa', strokeWidth: 2 }}
+                        dot={{ fill: '#16a34a', stroke: '#facc15', strokeWidth: 2 }}
                         activeDot={{ r: 6 }}
                     />
                 </LineChart>

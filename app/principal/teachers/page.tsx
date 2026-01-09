@@ -44,17 +44,17 @@ export default function TeachersListPage() {
 
     if (loading) return (
         <div className="min-h-screen bg-black flex items-center justify-center">
-            <Loader2 className="h-8 w-8 text-[#60a5fa] animate-spin" />
+            <Loader2 className="h-8 w-8 text-[#facc15] animate-spin" />
         </div>
     )
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#1e40af] p-4 md:p-8">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-[#16a34a] p-4 md:p-8">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
                     <div>
                         <Link href="/principal/dashboard">
-                            <Button variant="ghost" className="text-white hover:text-[#60a5fa] mb-2 p-0">
+                            <Button variant="ghost" className="text-white hover:text-[#facc15] mb-2 p-0">
                                 <ArrowLeft className="mr-2 h-4 w-4" />
                                 Dashboard
                             </Button>
@@ -73,7 +73,7 @@ export default function TeachersListPage() {
                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500" />
                     <input
                         type="text"
-                        className="w-full bg-white/5 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white outline-none focus:ring-2 focus:ring-[#1e40af] transition-all"
+                        className="w-full bg-white/5 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-white outline-none focus:ring-2 focus:ring-[#16a34a] transition-all"
                         placeholder="Search by name or ID..."
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
@@ -82,18 +82,18 @@ export default function TeachersListPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredTeachers.map((teacher) => (
-                        <Card key={teacher.id} className="border-white/10 bg-black/40 backdrop-blur-sm hover:border-[#60a5fa]/50 transition-all group">
+                        <Card key={teacher.id} className="border-white/10 bg-black/40 backdrop-blur-sm hover:border-[#facc15]/50 transition-all group">
                             <CardContent className="p-6">
                                 <div className="flex items-start justify-between mb-4">
-                                    <div className="w-12 h-12 bg-[#60a5fa]/10 rounded-full flex items-center justify-center group-hover:bg-[#60a5fa]/20 transition-colors">
-                                        <User className="h-6 w-6 text-[#60a5fa]" />
+                                    <div className="w-12 h-12 bg-[#facc15]/10 rounded-full flex items-center justify-center group-hover:bg-[#facc15]/20 transition-colors">
+                                        <User className="h-6 w-6 text-[#facc15]" />
                                     </div>
-                                    <span className="px-2 py-1 rounded bg-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-wider">
+                                    <span className="px-2 py-1 rounded bg-green-600/20 text-blue-400 text-[10px] font-bold uppercase tracking-wider">
                                         Faculty
                                     </span>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-1">{teacher.user.name}</h3>
-                                <p className="text-[#1e40af] font-bold text-sm mb-4">{teacher.teacherId}</p>
+                                <p className="text-[#16a34a] font-bold text-sm mb-4">{teacher.teacherId}</p>
 
                                 <div className="space-y-2 mb-6 text-sm text-gray-400">
                                     <div className="flex items-center">
@@ -102,7 +102,7 @@ export default function TeachersListPage() {
                                     </div>
                                     <div className="pt-2">
                                         <p className="text-white text-xs font-bold mb-2 flex items-center">
-                                            <BookOpen className="h-3 w-3 mr-2 text-[#60a5fa]" />
+                                            <BookOpen className="h-3 w-3 mr-2 text-[#facc15]" />
                                             CURRENT ASSIGNMENTS ({teacher.assignments.length})
                                         </p>
                                         <div className="flex flex-wrap gap-1">

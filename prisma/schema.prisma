@@ -99,6 +99,8 @@ model Activity {
   academicYearId  String
   term            Int
   points          Int          @default(100)
+  isApproved      Boolean      @default(false)
+  approvedBy      String?
   createdAt       DateTime     @default(now())
   
   subject         Subject      @relation(fields: [subjectId], references: [id])
@@ -297,6 +299,8 @@ model TeachingResource {
   fileUrl         String
   fileType        String
   tags            String
+  isApproved      Boolean  @default(false)
+  approvedBy      String?
   uploadedAt      DateTime @default(now())
   
   teacher         Teacher  @relation(fields: [teacherId], references: [id], onDelete: Cascade)
